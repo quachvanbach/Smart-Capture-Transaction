@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.app-container {
+    height: 100vh;
+}
+
+.app-header-container {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    color: #F1EDFF;
+    background-color: #1E1F22;
+    padding: 0 32px;
+}
+
+.app-header-item {
+    padding: 0 8px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+}
+
+.btn.btn-tools:hover {
+    background-color: #353639;
+    z-index: 5;
+}
+
+.btn.btn-tools:focus-visible {
+    background-color: #353639;
+    border: solid 1px;
+}
+
+.tool-box:hover .tools-box-popup {
+    display: block;
+}
+
+.btn-tools::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    right: 0;
+    display: block;
+    opacity: 0;
+}
+
+.tools-box-popup {
+    background-color: white;
+    color: #5D626B;
+    position: absolute;
+    top: 64px;
+    max-width: 40%;
+    border-radius: 5px;
+    display: none;
+}
+
+.tool-text {
+    width: max-content;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.tool-items {
+    flex: 0 0 40%;
+    margin: 10px 20px;
+}
+
+.btn.btn-dashboard {
+    background-color: #221EF5;
+    border-radius: 10px;
+}
+
+.btn.btn-dashboard:hover {
+    background-color: #223CE5;
+}
+
+.btn.btn-sign-up {
+
+}
+
+.btn.btn-sign-in {
+    background-color: #2C7DFA;
+}
+
+.step-container {
+
+}
+
+.step-container__header {
+
+}
+
+span {
+    height: 1px;
+    width: 46px;
+    background-color: #9da2ad;
+}
+
+.btn-step-item {
+    padding: 0 16px;
+    background-color: #9DA2AD;
+    color: #2B2B2B;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.account-modal {
+
+}
+
+.show {
+    display: block;
+}
+
+.app-content {
+    width: 100%;
+    flex: 1 1 0;
+    background-image: url("../images/content-background.svg");
+
+}

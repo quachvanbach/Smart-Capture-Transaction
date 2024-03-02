@@ -7,10 +7,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smart Capture Transaction</title>
     <link rel="stylesheet" href="./assets/styles/tailwindcss-output.css">
+    <link rel="stylesheet" href="./assets/styles/app.css">
 </head>
 <body>
-<div class="h-[100px] w-[100px]">
-
+<div class="app-container flex flex-col">
+    <div class="app-header">
+        <div class="app-header-container">
+            <div class="app-header-item">
+                <button type="button" class="btn btn-logo">Logo</button>
+            </div>
+            <div class="app-header-item">
+                <div class="tool-box">
+                    <button type="button" class="btn btn-tools relative">Smart Capture Transaction</button>
+                    <div class="tools-box-popup">
+                        <p class="tool-text text-[#A5AAB4]">Tools</p>
+                        <ul class="tool-list flex flex-wrap justify-around">
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                            <li class="tool-items"><a href="#">1234567890</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header-item flex-1 text-right">
+                <button type="button" class="btn btn-dashboard">Dashboard</button>
+            </div>
+            <div class="app-header-item">
+                <button type="button" class="btn btn-sign-up">Sign up</button>
+            </div>
+            <div class="app-header-item">
+                <button type="button" class="btn btn-sign-in">Sign in</button>
+            </div>
+        </div>
+    </div>
+    <div class="app-content flex-1">
+        <div class="step-container">
+            <div class="step-container__header flex justify-center items-center mx-[32px] my-[16px] leading-[32px]">
+                <div class="step-item">
+                    <button class="btn btn-step-item">Step 1: Upload file</button>
+                </div>
+                <span></span>
+                <div class="step-item">
+                    <button class="btn btn-step-item">Step 2: Progress</button>
+                </div>
+                <span></span>
+                <div class="step-item">
+                    <button class="btn btn-step-item">Step 3: Statistical</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-footer"></div>
 </div>
+
+<!--<div class="modal account-modal">-->
+<!--    <button class="btn-primary relative m-auto">Test button</button>-->
+<!--</div>-->
+
+<script src="./assets/js/app.js"></script>
 </body>
 </html>
