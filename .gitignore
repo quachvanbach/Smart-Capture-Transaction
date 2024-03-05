@@ -1,3 +1,4 @@
 /.idea/
 /vendor/tailwindcss/node_modules/
 run-tailwind.bat
+vendor/tailwindcss/test-url.html

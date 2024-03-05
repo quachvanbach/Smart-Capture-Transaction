@@ -19,13 +19,14 @@ html {
     padding: 0 32px;
 }
 
+
 .app-header-item {
     padding: 0 8px;
 }
 
 .btn {
-    padding: 8px 16px;
-    border-radius: 999px;
+    padding: 8px;
+    border-radius: 100px;
 }
 
 .btn.btn-tools:hover {
@@ -33,16 +34,11 @@ html {
     z-index: 5;
 }
 
-.btn.btn-tools:focus-visible {
-    background-color: #353639;
-    border: solid 1px;
-}
-
-.tool-box:hover .tools-box-popup {
+.tools-btn-container:hover + .tools-box-popup, .tools-box-popup:hover {
     display: block;
 }
 
-.btn-tools::after {
+.btn.btn-tools::after {
     content: "";
     position: absolute;
     height: 30px;
@@ -52,16 +48,6 @@ html {
     opacity: 0;
 }
 
-.tools-box-popup {
-    background-color: white;
-    color: #5D626B;
-    position: absolute;
-    top: 64px;
-    max-width: 40%;
-    border-radius: 5px;
-    display: none;
-}
-
 .tool-text {
     width: max-content;
     margin-top: 10px;
@@ -69,8 +55,18 @@ html {
 }
 
 .tool-items {
-    flex: 0 0 40%;
+    color: #414751;
     margin: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tool-items::after {
+border-bottom: solid 1px #221EF5;
+}
+
+.tool-items.mobile {
+    flex-basis: 100%;
 }
 
 .btn.btn-dashboard {
@@ -94,13 +90,13 @@ html {
 
 }
 
-.step-container__header {
+.step-header {
 
 }
 
-span {
+.line{
     height: 1px;
-    width: 46px;
+    width: 7%;
     background-color: #9da2ad;
 }
 
@@ -108,6 +104,30 @@ span {
     padding: 0 16px;
     background-color: #9DA2AD;
     color: #2B2B2B;
+}
+
+.btn-step-item.active {
+    background: linear-gradient(90deg, #26ffa5, #2643ff 99%);
+    color: #fff !important;
+}
+
+.step-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-content__item {
+    /*flex-basis: ;*/
+    background-color: #221EF5;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+}
+
+.step-content__item.active {
+    display: flex;
 }
 
 .modal {
@@ -121,10 +141,6 @@ span {
 
 .account-modal {
 
-}
-
-.show {
-    display: block;
 }
 
 .app-content {

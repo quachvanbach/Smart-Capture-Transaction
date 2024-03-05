@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@layer components {
+    .custom-li {
+        @apply text-[#414751] mx-[20px] my-[10px] basis-[40%] sm:basis-[100%] flex-wrap;
+    }
+    .btn-general {
+
+    }
+}

@@ -12,51 +12,69 @@
 <body>
 <div class="app-container flex flex-col">
     <div class="app-header">
-        <div class="app-header-container">
+        <div class="app-header-container flex items-center h-[64px] text-[#F1EDFF] bg-[#1E1F22] lg:px-[32px] sm:px-[16px]">
             <div class="app-header-item">
                 <button type="button" class="btn btn-logo">Logo</button>
             </div>
-            <div class="app-header-item">
-                <div class="tool-box">
-                    <button type="button" class="btn btn-tools relative">Smart Capture Transaction</button>
-                    <div class="tools-box-popup">
-                        <p class="tool-text text-[#A5AAB4]">Tools</p>
-                        <ul class="tool-list flex flex-wrap justify-around">
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                            <li class="tool-items"><a href="#">1234567890</a></li>
-                        </ul>
-                    </div>
+            <div class="app-header-item sm:order-[-1]">
+                <div class="tools-btn-container">
+                    <button type="button" class="btn btn-tools relative sm:hidden">Smart Capture Transaction</button>
+                    <img class="lg:hidden" src="./assets/images/tools-button-icon.svg" alt="tool-button">
+                </div>
+                <div class="tools-box-popup absolute top-[64px] bg-white rounded-[5px] sm:w-screen sm:left-0 hidden">
+                    <p class="tool-text text-[#A5AAB4] sm:hidden">Tools</p>
+                    <ul class="tool-list flex flex-wrap  justify-around">
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">1</a></li>
+                        <span class="line tool-line w-[90%] basis-[100%] lg:hidden"></span>
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">12</a></li>
+                        <span class="line tool-line w-[90%] basis-[100%] lg:hidden"></span>
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">123</a></li>
+                        <span class="line tool-line w-[90%] basis-[100%] lg:hidden"></span>
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">1234</a></li>
+                        <span class="line tool-line w-[90%] basis-[100%] lg:hidden"></span>
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">12345</a></li>
+                        <span class="line tool-line w-[90%] basis-[100%] lg:hidden"></span>
+                        <li class="tool-items basis-[40%] sm:basis-[90%] "><a href="#">123456</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="app-header-item flex-1 text-right">
-                <button type="button" class="btn btn-dashboard">Dashboard</button>
+                <button type="button" class="btn btn-dashboard sm:hidden">Dashboard</button>
             </div>
             <div class="app-header-item">
                 <button type="button" class="btn btn-sign-up">Sign up</button>
             </div>
             <div class="app-header-item">
-                <button type="button" class="btn btn-sign-in">Sign in</button>
+                <button type="button" class="btn btn-sign-in sm:hidden">Sign in</button>
             </div>
         </div>
     </div>
-    <div class="app-content flex-1">
-        <div class="step-container">
-            <div class="step-container__header flex justify-center items-center mx-[32px] my-[16px] leading-[32px]">
-                <div class="step-item">
-                    <button class="btn btn-step-item">Step 1: Upload file</button>
+    <div class="app-content flex flex-col flex-1">
+        <div class="step-container flex flex-col flex-1">
+            <div class="step-header flex justify-center items-center mx-[32px] my-[16px] leading-[32px] sm:hidden">
+                <div class="step-header__item step-header__upload">
+                    <button class="btn btn-step-item upload-btn active">Step 1: Upload file</button>
                 </div>
-                <span></span>
-                <div class="step-item">
-                    <button class="btn btn-step-item">Step 2: Progress</button>
+                <span class="line"></span>
+                <div class="step-header_item step-header__progress">
+                    <button class="btn btn-step-item progress-btn">Step 2: Progress</button>
                 </div>
-                <span></span>
-                <div class="step-item">
-                    <button class="btn btn-step-item">Step 3: Statistical</button>
+                <span class="line"></span>
+                <div class="step-header__item step-header__statistical">
+                    <button class="btn btn-step-item show-statistical-btn">Step 3: Statistical</button>
                 </div>
+            </div>
+            <div class="step-content flex-1">
+                <div class="step-content__item active step-content__upload">
+                    <div class="drag-file-area h-[70%] w-[80%] border-dashed border-2 border-sky-500">
+
+                    </div>
+                </div>
+                <div class="step-content__item step-content__progress">2</div>
+                <div class="step-content__item step-content__statistical">3</div>
+            </div>
+            <div class="step-footer flex justify-center">
+                <button type="button" class="btn btn-next-step bg-[#2C7DFA] text-center basis-1/2">Next</button>
             </div>
         </div>
     </div>
