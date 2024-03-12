@@ -25,8 +25,14 @@ html {
 }
 
 .btn {
-    padding: 8px;
+    padding: 8px 16px;
     border-radius: 100px;
+    white-space: nowrap;
+}
+
+.btn.disabled {
+    background-color: #9DA2AD;
+    cursor: not-allowed;
 }
 
 .btn.btn-tools:hover {
@@ -62,7 +68,7 @@ html {
 }
 
 .tool-items::after {
-border-bottom: solid 1px #221EF5;
+    border-bottom: solid 1px #221EF5;
 }
 
 .tool-items.mobile {
@@ -94,7 +100,7 @@ border-bottom: solid 1px #221EF5;
 
 }
 
-.line{
+.line {
     height: 1px;
     width: 7%;
     background-color: #9da2ad;
@@ -119,15 +125,67 @@ border-bottom: solid 1px #221EF5;
 
 .step-content__item {
     /*flex-basis: ;*/
-    background-color: #221EF5;
+    /*background-color: #221EF5;*/
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     display: none;
+    width: 100%;
 }
 
 .step-content__item.active {
     display: flex;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.btn-choose-file {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-progress {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.upload-progress-item {
+    margin-bottom: 10px;
+    position: relative;
+    height: 30px;
+}
+
+.upload-progress-item .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    max-width: 100%;
+    background-color: #007bff;
+}
+
+.upload-progress-item .file-info {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.file-info .file-name {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .modal {

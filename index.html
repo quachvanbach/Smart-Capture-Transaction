@@ -66,15 +66,22 @@
             </div>
             <div class="step-content flex-1">
                 <div class="step-content__item active step-content__upload">
-                    <div class="drag-file-area h-[70%] w-[80%] border-dashed border-2 border-sky-500">
-
+                    <div class="upload-form">
+                        <button class="btn btn-choose-file" onclick="document.getElementById('upload-file').click()">Choose
+                            file
+                        </button>
+                        <input id="upload-file" style="display: none" type="file"
+                               accept="image/jpeg, image/png, image/pdf, image/svg, video/*" multiple
+                               onchange="handleFileSelect(event)">
+                        <div class="upload-progress" id="upload-progress"></div>
                     </div>
                 </div>
                 <div class="step-content__item step-content__progress">2</div>
                 <div class="step-content__item step-content__statistical">3</div>
             </div>
-            <div class="step-footer flex justify-center">
-                <button type="button" class="btn btn-next-step bg-[#2C7DFA] text-center basis-1/2">Next</button>
+            <div class="step-footer flex justify-evenly">
+                <button type="button" class="btn btn-prev-step bg-[#2C7DFA] text-center basis-1/4">Prev step</button>
+                <button type="button" class="btn btn-next-step bg-[#2C7DFA] text-center basis-1/4">Next step</button>
             </div>
         </div>
     </div>
